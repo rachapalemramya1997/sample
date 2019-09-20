@@ -1,0 +1,118 @@
+var MathOperations;
+(function (MathOperations) {
+    var Circle;
+    (function (Circle) {
+        var PI = 3.144;
+        function circumferenceOfCircle(radius) {
+            console.log("The circumference of circle is " + 2 * PI * radius);
+        }
+        Circle.circumferenceOfCircle = circumferenceOfCircle;
+        function areaOfCircle(radius) {
+            console.log("The area of circle is " + PI * radius * radius);
+        }
+        Circle.areaOfCircle = areaOfCircle;
+    })(Circle = MathOperations.Circle || (MathOperations.Circle = {}));
+})(MathOperations || (MathOperations = {}));
+MathOperations.Circle.circumferenceOfCircle(23);
+var rectangleOperations;
+(function (rectangleOperations) {
+    var rectangle;
+    (function (rectangle) {
+        function area(length, breadth) {
+            console.log("Area of rectangle is " + length * breadth);
+        }
+        rectangle.area = area;
+        function perimeter(length, breadth) {
+            console.log("perimeter of rectangle is " + 2 * (length + breadth));
+        }
+        rectangle.perimeter = perimeter;
+    })(rectangle = rectangleOperations.rectangle || (rectangleOperations.rectangle = {}));
+})(rectangleOperations || (rectangleOperations = {}));
+rectangleOperations.rectangle.area(4, 6);
+//let myName:string = 'Ramya';
+//alert(myName);
+/*let myName: string[] = 'Ramya';
+let company;
+company = 'testyanthra';
+company = 25;
+console.log(company);
+console.log(myName);*/
+/*let sample : number | boolean;
+sample = 10;
+sample = true;
+console.log(sample);
+
+let myArray:string[] = ['erty','ertyf','ertyg'];
+console.log(myArray);
+let myTuple: [string, number, boolean] = ['', 123, true];*/
+//enum is a keyword
+/*enum colors {
+    red = 'Danger', green = 'good', blue = 'primary', black = 'dark'
+}
+console.log(colors.black);*/
+//class is a blueprint of a object
+/*class Person{      //classes
+name: string;      //we are not using any keywords like var,let,const
+age: number;
+constructor(public personName: string,public personAge: number){
+//this.name = personName;
+//this.age = personAge;
+}
+
+*/
+/*class Person{
+constructor(public personName: string,public personAge: number){
+//this.name = personName;
+//this.age = personAge;
+}
+
+}
+let person = new Person('Ramya',21);
+console.log(person.personAge);*/
+// let myName = 'Ramya';
+// myName = null;
+/*class Car {
+    brand: string = 'BMW';
+    static model: string = 'x5';
+}
+let bmwCar = new Car();
+console.log(bmwCar.brand);
+console.log(bmwCar.model);*/
+//by using constructer
+/*class Car {
+    constructor(public brand: string, public model: string){
+
+    }
+}
+let bmwCar = new Car('BMW','x5');
+console.log(bmwCar.brand);
+console.log(bmwCar.model);
+
+let benzCar: Car ={
+
+    brand : 'Benz',
+    model : '0002'
+}*/
+//inheritance
+/*class Person {
+    constructor(public name: string, public age:number){}
+}
+class Student extends Person{
+    constructor(public myName: string, public myAge: number, public USB: number){
+        super(myName,myAge);
+    }
+}
+let person1 = new Person('Dinga',23);
+let student1 = new Student('Dingi',22,45667);*/
+// class Person{
+//     constructor(public name: string,public age: number, public degree?: string){}
+// }
+// let person1: Person = {
+//     name: 'ramya',
+//     age : 23,
+//     degree:'Engineering'
+// }
+///<reference path="./circle.ts"/>
+///<reference path="./rectangle.ts"/>
+MathOperations.Circle.circumferenceOfCircle(23);
+rectangleOperations.rectangle.area(4, 6);
